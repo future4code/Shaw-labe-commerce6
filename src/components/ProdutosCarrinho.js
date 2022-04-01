@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 
-const ConjuntoDeItens = styled.div`
+const DivItens = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,11 +14,13 @@ const ConjuntoDeItens = styled.div`
 class Itens extends React.Component {
     render() {
       return (
-        <ConjuntoDeItens>
+        <DivItens>
           <p>{this.props.quantidade}x</p>
           <p>{this.props.nome}</p>
           <button onClick={this.props.onClick}>Remover</button>
-        </ConjuntoDeItens>
+        </DivItens>
       );
     }
   }
+
+  export default Itens

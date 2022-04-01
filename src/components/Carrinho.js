@@ -2,7 +2,7 @@ import React from "react";
 import Itens from "./ProdutosCarrinho"
 import styled from "styled-components";
 
-const ConjuntoDoCarrinho = styled.div`
+const DivCarrinho = styled.div`
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -37,12 +37,21 @@ class Carrinho extends React.Component {
       });
 
     return (
-      <ConjuntoDoCarrinho>
+      <DivCarrinho>
         <h2>Carrinho:</h2>
         <div>{itensDoCarrinho}</div>
-        <p>Valor total: R$ {this.props.valorTotal},00</p>
-      </ConjuntoDoCarrinho>
+        <p>Valor total: R$ {this.props.valorTotal}</p>
+      </DivCarrinho>
     );
   }}
 
 export default Carrinho;
+
+
+
+
+/* <Carrinho
+carrinho={this.state.carrinho}
+valorTotal={this.state.valorTotal}
+removerItemDoCarrinho={this.removerItemDoCarrinho}
+/> */
