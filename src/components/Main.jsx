@@ -38,7 +38,7 @@ const Card = styled.div`
     justify-content: center;
 `;
 
-class App extends React.Component {
+class Main extends React.Component {
   state = {
     pacotes: [
       {
@@ -124,4 +124,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Main;
