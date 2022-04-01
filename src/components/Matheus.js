@@ -44,14 +44,6 @@ align-items: center;
 font-size: 24px;
 font-weight: bolder;
 `
-const Rodape = styled.footer`
-width: 100vw;
-height: 15%;
-border: solid 1px black;
-display: flex;
-justify-content: space-around;
-align-items: center;
-`
 
 const Seletor = styled.select`
 width: 90px;
@@ -115,11 +107,6 @@ export default class Matheus extends React.Component {
           </Seletor>
         </InputsContainer>
 
-        <Rodape>
-          <h5> Futurama - Passagens Espaciais - 00.123.456/0001-00
-            Rua Pais Leme, 215 - São Paulo, SP - 05424-150</h5>
-          <a href="http://localhost:3000/"> <button class="botao">Volte ao Topo</button></a>
-        </Rodape>
       </AppBody>
     )
   }
