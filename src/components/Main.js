@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {addCarrinho} from "../App";
 
 const MainContainer = styled.div`
   display: flex;
@@ -88,66 +89,7 @@ class Main extends React.Component {
     carrinho: [],
   };
 
-
-      /* addCarrinho = (produto) => {
-        const carrinhoCheio = [produto.id,...this.state.carrinho]
-        this.setState({carrinho: carrinhoCheio})
-
-      } */
-  addCarrinho = (produto) => {
-    const produtoNoCarrinho = this.state.carrinho.filter((pacote) => {
-      if (pacote.id === produto.id) {
-        return pacote;
-      }else{
-        return false
-      }
-    });
-    if (produtoNoCarrinho.length === 0) {
-      produto.quantidade = 1;
-      const novoCarrinho = [produto, ...this.state.carrinho];
-      this.setState({
-        carrinho: novoCarrinho,
-      });
-    } else {
-      const novoCarrinho = this.state.carrinho.map((pacote) => {
-        if (produto.id === pacote.id) {
-          return { ...pacote, quantidade: pacote.quantidade + 1 };
-        } else {
-          return pacote;
-        }
-      });
-      this.setState({
-        carrinho: novoCarrinho,
-      });
-    }
-    this.addTotalValue(produto.preco);
-  };
-removeCarrinho = (pacoteParaRemover) => {
-    if (pacoteParaRemover.quantidade === 1) {
-      const novoCarrinho = this.state.carrinho.filter((pacote) => {
-        if (pacote.id !== pacoteParaRemover.id) {
-          return pacote;
-        }else{
-          return false
-        }
-      });
-      this.setState({
-        carrinho: novoCarrinho,
-      });
-    } else {
-      const novoCarrinho = this.state.carrinho.map((pacote) => {
-        if (pacoteParaRemover.id === pacote.id && pacote.quantidade >= 1) {
-          return { ...pacote, quantidade: pacote.quantidade - 1 };
-        } else {
-          return pacote;
-        }
-      });
-      this.setState({
-        carrinho: novoCarrinho,
-      });
-    }
-    this.removeTotalValue(pacoteParaRemover.preco)
-  };
+  
 
   render() {
     const renderizaNaTela = this.state.pacotes.map((pacote) => {
@@ -158,7 +100,7 @@ removeCarrinho = (pacoteParaRemover) => {
             <h3>{pacote.title}</h3>
             <h4>{pacote.price}</h4>
           </div>
-          <button onClick={this.addCarrinho}>Adicionar ao Carrinho</button>
+          <button onClick={() => this.props.addCarrinho(pacote.id)}>Adicionar ao Carrinho</button>
         </Card>
       );
     });

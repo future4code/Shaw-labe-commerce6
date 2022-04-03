@@ -46,12 +46,3 @@ class Carrinho extends React.Component {
   }}
 
 export default Carrinho;
-
-
-
-
-/* <Carrinho
-carrinho={this.state.carrinho}
-valorTotal={this.state.valorTotal}
-removerItemDoCarrinho={this.removerItemDoCarrinho}
-/> */
