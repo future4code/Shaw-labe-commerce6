@@ -13,7 +13,7 @@ React
 O Futurama é um modelo de website ficticio criado para o curso da Labenu
 
 🔖 Layout
-Você pode visualizar o layout do projeto através : undesirable-rifle.surge.sh
+Você pode visualizar o layout do projeto através :https://undesirable-rifle.surge.sh/
 
 
 🚀 Como executar
@@ -27,5 +27,9 @@ $ cd Shaw-labe-commerce6
 ✒️ Author
 
 Laura Neves Amancio https://github.com/lauraamancio
+
+
 Matheus do Santos https://github.com/MatheusJesuino
+
+
 Tácio Franco https://github.com/Tryndamoron
