@@ -1,5 +1,5 @@
-Futurama 
-Tecnologias   |    Projeto   |    Layout   |    Como executar   
+Futurama Passagens Espaciais
+
 
 ![image](https://user-images.githubusercontent.com/98991478/161459149-ddf325ba-ee11-4ace-96da-4ca2e8ae0b11.png)
 
