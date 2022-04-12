@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {addCarrinho} from "../App";
 
 const MainContainer = styled.div`
   display: flex;
@@ -88,15 +89,7 @@ class Main extends React.Component {
     carrinho: [],
   };
 
-  /* addCarrinho = (produto) => {
-    const produtoNoCarrinho = this.state.carrinho.filter((item) => {
-      if (item.id === produto.id) {
-        return item;
-      } else {
-        return false;
-      }
-    });
-  }; */
+  
 
   render() {
     const renderizaNaTela = this.state.pacotes.map((pacote) => {
@@ -107,7 +100,7 @@ class Main extends React.Component {
             <h3>{pacote.title}</h3>
             <h4>{pacote.price}</h4>
           </div>
-          <button onClick={this.addCarrinho}>Adicionar ao Carrinho</button>
+          <button onClick={() => this.props.addCarrinho(pacote.id)}>Adicionar ao Carrinho</button>
         </Card>
       );
     });
